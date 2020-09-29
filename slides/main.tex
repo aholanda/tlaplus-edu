@@ -1,0 +1,46 @@
+
+\documentclass[]{beamer}
+
+% Dependencies
+\usepackage{fontspec} % use XeLaTeX
+\usepackage[]{polyglossia}
+\setdefaultlanguage{brazil}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,anchorcolor=blue,urlcolor=blue}
+
+\usepackage{tikz,pgf}
+\usepackage{xcolor}
+
+% Definitions
+  \author{Adriano J. Holanda}%\\{\scriptsize \url{http://holanda.xyz}}}
+  \def\bigO#1{\mathcal{O}(#1)}
+  \def\bug#1{{\it bug#1\/}}
+  % C letter
+  \font\ninerm=cmr9
+  \let\mc=\ninerm
+  \def\CEE{{\mc C\spacefactor1000}}
+
+% THEOREM
+\newtheorem{teorema}[theorem]{Teorema}
+
+\def\fonte#1{\begingroup\tiny\tt\color{gray} Fonte:~#1\endgroup}
+
+\usepackage{amsmath}
+\usepackage{pgf-umlcd}
+\usepackage{listings}
+\lstset{    
+  columns=flexible,
+  basicstyle=\scriptsize,
+  commentstyle={\scriptsize\color{gray}},
+  numbers=left,numberstyle=\tiny,numbersep=5pt,
+  frame=single,
+  language=Java}
+
+\usefonttheme{professionalfonts}
+
+\begin{document}
+
+\input intro
+
+\end{document}
