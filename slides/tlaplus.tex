@@ -3,7 +3,7 @@
 
 \lecture{Lógica Temporal de Ações$^+$}{tlaplus}
 
-\frame{\maketitle}
+\frame{\title{\insertlecture}\maketitle}
 
 \begin{frame}{\tla}
   \begin{itemize}
@@ -46,6 +46,77 @@
     consistência.~[\href{https://techcrunch.com/2017/05/10/with-cosmos-db-microsoft-wants-to-build-one-database-to-rule-them-all/}{ref1},
     \href{https://techcrunch.com/2017/05/10/with-cosmos-db-microsoft-wants-to-build-one-database-to-rule-them-all/}{ref2}]
   \end{itemize}
+  
+\end{frame}
+
+\begin{frame}{Lógica Proposicional}{Pré-requisito}
+  É a matemática de 2 valores Booleanos {\sc Verdadeiro} e {\sc Falso} 
+  e cinco operadores cujos nomes são:
+
+  \begin{block}{Operadores}
+    \begin{tabbing}
+        $\land\qquad$ \= conjunção (ou) \\
+        $\lor$  \> disjunção (e) \\
+        $\lnot$ \> negação (não) \\
+        $\implies$ \> implicação (implica) \\
+        $\equiv$ \> equivalência (equivale) \\
+      \end{tabbing}
+  \end{block}
+
+    \pause
+    \begin{block}{Exemplos}\tiny
+      \begin{tabbing}
+        $G\land H\qquad$ \= é {\sc Verdadeiro} se $G$ e $H$ forem {\sc VERDADEIRO} \\
+        $G\lor H$  \> é {\sc Verdadeiro} se $G$ ou $H$ forem {\sc VERDADEIRO} (ou ambos) \\
+        $\lnot G$ \> é {\sc Verdadeiro} se $G$ for {\sc FALSO} \\
+        $G\implies H$ \> é {\sc Verdadeiro} se $G$ for {\sc FALSO} e $H$ for {\sc VERDADEIRO} (ou ambos) \\
+        $G\equiv H$ \> é {\sc Verdadeiro} se $G$ e $H$ forem {\sc VERDADEIRO} ou ambos forem {\sc Falso}\\
+      \end{tabbing}
+    \end{block}
+  
+\end{frame}
+
+\begin{frame}{Conjuntos}{Pré-requisito}
+
+  \begin{block}{Operadores}
+    \begin{tabbing}
+        $\cap\qquad$ \= intersecção \\
+        $\cup$  \> união \\
+        $\subseteq$ \> subconjunto \\
+        $\setminus$ \> implicação (implica) \\
+      \end{tabbing}
+  \end{block}
+
+    \pause
+    \begin{block}{Exemplos}\tiny
+      \begin{tabbing}
+        $R\cap S\qquad$ \= $\{1, -2/3, 5\}\cap\{1,3,5,7,9\} = \{1,5\} $ \\
+        $R\cup S$  \> $\{1, -2/3, 5\}\cup\{1,5,9\} = \{1,-2/3,5,9\} $ \\
+        $R\subseteq S$ \> $\{1, 5\}\subseteq\{1,3,5,9\}$ \\
+        $R\setminus S$ \> $\{1, -2/3, 5\}\setminus\{1,3,5,7,9\} = \{-2/3,3,7,9\} $ \\
+      \end{tabbing}
+    \end{block}
+  
+\end{frame}
+
+\begin{frame}{Lógica de Predicacos}{Pré-requisito}
+  A lógica de predicados estende a lógica proposicional com 
+  a adição de operadores que trabalham com conjuntos de elementos.
+
+  \begin{block}{Operadores}
+    \begin{tabbing}
+        $\forall\qquad$ \= quantificação universal (para todo) \\
+        $\exists$  \> quantificação existencial (existe) \\
+      \end{tabbing}
+  \end{block}
+
+    \pause
+    \begin{block}{Exemplos}\tiny
+      \begin{tabbing}
+        $ (\forall x \in R: S) \qquad$ \= para todo $x$ em $R$, a fórmula S é {\sc VERDADEIRA} \\
+        $ (\exists x \in R: S) \qquad$ \= existe $x$ em $R$, em que a fórmula S é {\sc VERDADEIRA} \\
+      \end{tabbing}
+    \end{block}
   
 \end{frame}
 
