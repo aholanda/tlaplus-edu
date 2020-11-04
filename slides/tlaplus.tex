@@ -18,19 +18,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{\tla}{}
-  Basicamente, iremos nos concentrar nos seguintes aspectos da linguagem:
-
-  \begin{description}
-  \item[Init]: Estado inicial da computação;
-  \item[Invariant]: Propriedades que não variam durante a execução do sistema;
-  \item[Next]: Próximo estado possível após o início da execução;
-  \item[Spec]: Especificação do sistema.
-  \end{description}
-  
-  
-\end{frame}
-
 \begin{frame}{Exemplos de Uso}\small
   \begin{itemize}[<+-| alert@+>]\setbeamercovered{transparent}
   \item Na Microsoft, um \textit{bug} crítico foi encontrado durante o
@@ -46,17 +33,27 @@
     consistência.~[\href{https://techcrunch.com/2017/05/10/with-cosmos-db-microsoft-wants-to-build-one-database-to-rule-them-all/}{ref1},
     \href{https://techcrunch.com/2017/05/10/with-cosmos-db-microsoft-wants-to-build-one-database-to-rule-them-all/}{ref2}]
   \end{itemize}
-  
+
+\end{frame}
+
+\begin{frame}{\tla}{}
+  Basicamente, iremos nos concentrar nos seguintes aspectos da linguagem:
+  \begin{description}
+  \item[Init]: Estado inicial da computação;
+  \item[Invariant]: Propriedades que não variam durante a execução do sistema;
+  \item[Next]: Próximo estado possível após o início da execução;
+  \item[Spec]: Especificação do sistema.
+  \end{description}
 \end{frame}
 
 \begin{frame}{Lógica Proposicional}{Pré-requisito}
-  É a matemática de 2 valores Booleanos {\sc Verdadeiro} e {\sc Falso} 
+  É a matemática de 2 valores Booleanos {\sc Verdadeiro} e {\sc Falso}
   e cinco operadores cujos nomes são:
 
   \begin{block}{Operadores}
     \begin{tabbing}
-        $\land\qquad$ \= conjunção (ou) \\
-        $\lor$  \> disjunção (e) \\
+        $\land\qquad$ \= conjunção (e) \\
+        $\lor$  \> disjunção (ou) \\
         $\lnot$ \> negação (não) \\
         $\implies$ \> implicação (implica) \\
         $\equiv$ \> equivalência (equivale) \\
@@ -73,7 +70,7 @@
         $G\equiv H$ \> é {\sc Verdadeiro} se $G$ e $H$ forem {\sc VERDADEIRO} ou ambos forem {\sc Falso}\\
       \end{tabbing}
     \end{block}
-  
+
 \end{frame}
 
 \begin{frame}{Conjuntos}{Pré-requisito}
@@ -83,7 +80,7 @@
         $\cap\qquad$ \= intersecção \\
         $\cup$  \> união \\
         $\subseteq$ \> subconjunto \\
-        $\setminus$ \> implicação (implica) \\
+        $\setminus$ \> diferença \\
       \end{tabbing}
   \end{block}
 
@@ -96,11 +93,11 @@
         $R\setminus S$ \> $\{1, -2/3, 5\}\setminus\{1,3,5,7,9\} = \{-2/3,3,7,9\} $ \\
       \end{tabbing}
     \end{block}
-  
+
 \end{frame}
 
-\begin{frame}{Lógica de Predicacos}{Pré-requisito}
-  A lógica de predicados estende a lógica proposicional com 
+\begin{frame}{Lógica de Predicados}{Pré-requisito}
+  A lógica de predicados estende a lógica proposicional com
   a adição de operadores que trabalham com conjuntos de elementos.
 
   \begin{block}{Operadores}
@@ -117,7 +114,7 @@
         $ (\exists x \in R: S) \qquad$ \= existe $x$ em $R$, em que a fórmula S é {\sc VERDADEIRA} \\
       \end{tabbing}
     \end{block}
-  
+
 \end{frame}
 
 \begin{frame}{Relógio alternado de 1-bit}{\em Alternate one-bit clock}
@@ -140,7 +137,7 @@
       \>\>$\land clk' = 0$
     }
     \end{tabbing}
-  
+
 \endgroup
 
 \pause\bigskip
@@ -168,7 +165,7 @@ $Spec$ == $Init$ $\land$ [\ ][Next]$_{<<clk>>}$ \comment{Especificação}
     $PositiveInteger$ siginifica que qualquer número Natural pode ser
     escolhido desde que seja diferente de $0$. {\sc theorem} pode ser
     ignorado, por enquanto, para nosso propósito.}
-  
+
   \includegraphics[scale=.5]{../src/GCD.pdf}
-  
+
 \end{frame}
