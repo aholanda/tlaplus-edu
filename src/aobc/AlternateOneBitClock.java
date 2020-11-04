@@ -11,6 +11,10 @@ public class AlternateOneBitClock {
 		System.out.print(this.clk);
 	}
 
+	private void Invariant(int clk) {
+		assert(clk == 0 || clk == 1);
+	}
+
 	public void Next() {
 		while(true) {
 			if (this.clk == 0)
@@ -18,6 +22,8 @@ public class AlternateOneBitClock {
 			else
 				this.clk = 0;
 			
+			this.Invariant(clk);
+
 			System.out.print(" -> " + this.clk);
 			try{
 				Thread.sleep(TIME_TO_WAIT);
